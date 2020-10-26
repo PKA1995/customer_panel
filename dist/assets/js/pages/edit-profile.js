@@ -186,7 +186,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\js\customer_panel\edit-profile.js */"./src/js/customer_panel/edit-profile.js");
+module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\edit-profile.js */"./src/js/customer_panel/edit-profile.js");
 
 
 /***/ })

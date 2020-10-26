@@ -262,18 +262,18 @@ common.init();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\js\customer_panel\common_customer.js */"./src/js/customer_panel/common_customer.js");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\common.sass */"./src/sass/customer_panel/common.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\projects.sass */"./src/sass/customer_panel/projects.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\project-detail.sass */"./src/sass/customer_panel/project-detail.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\ticket-list.sass */"./src/sass/customer_panel/ticket-list.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\ticket-single.sass */"./src/sass/customer_panel/ticket-single.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\home.sass */"./src/sass/customer_panel/home.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\login-sign-up.sass */"./src/sass/customer_panel/login-sign-up.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\profile.sass */"./src/sass/customer_panel/profile.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\edit-profile.sass */"./src/sass/customer_panel/edit-profile.sass");
-__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\add-ticket.sass */"./src/sass/customer_panel/add-ticket.sass");
-module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\sapren_customer_panel\src\sass\customer_panel\personalFactor.sass */"./src/sass/customer_panel/personalFactor.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\common_customer.js */"./src/js/customer_panel/common_customer.js");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\common.sass */"./src/sass/customer_panel/common.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\projects.sass */"./src/sass/customer_panel/projects.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\project-detail.sass */"./src/sass/customer_panel/project-detail.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\ticket-list.sass */"./src/sass/customer_panel/ticket-list.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\ticket-single.sass */"./src/sass/customer_panel/ticket-single.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\home.sass */"./src/sass/customer_panel/home.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\login-sign-up.sass */"./src/sass/customer_panel/login-sign-up.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\profile.sass */"./src/sass/customer_panel/profile.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\edit-profile.sass */"./src/sass/customer_panel/edit-profile.sass");
+__webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\add-ticket.sass */"./src/sass/customer_panel/add-ticket.sass");
+module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\sass\customer_panel\personalFactor.sass */"./src/sass/customer_panel/personalFactor.sass");
 
 
 /***/ })

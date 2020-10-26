@@ -81,72 +81,37 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/customer_panel/ticket-single.js":
-/*!************************************************!*\
-  !*** ./src/js/customer_panel/ticket-single.js ***!
-  \************************************************/
+/***/ "./src/js/customer_panel/personalFactor.js":
+/*!*************************************************!*\
+  !*** ./src/js/customer_panel/personalFactor.js ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 (function () {
-  var attach_input = document.querySelector('.upload-file-btn input'),
-      attach_file_name = document.querySelector('#attach-file-name span:last-child');
-  var _validFileExtensions = [".jpg", ".jpeg", ".pdf", ".png", ".txt", ".docx"];
-
-  function ValidateSingleInput(oInput) {
-    if (oInput.type == "file") {
-      var sFileName = oInput.value;
-
-      if (sFileName.length > 0) {
-        var blnValid = false;
-
-        for (var j = 0; j < _validFileExtensions.length; j++) {
-          var sCurExtension = _validFileExtensions[j];
-
-          if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
-            blnValid = true;
-            break;
-          }
-        }
-
-        if (!blnValid) {
-          alert("فایل انتخابی باید دارای فرمت jpg یا jpeg یا pdf یا png یا txt یا docx");
-          oInput.value = "";
-          return false;
-        }
-      }
-    }
-
-    return true;
-  }
-
-  attach_input.onchange = function () {
-    ValidateSingleInput(attach_input);
-    attach_file_name.textContent = attach_input.files[0].name;
-  };
-
-  var answer_btn = $('#answer-btn'),
-      form_reply = $('#reply');
-  answer_btn.on('click', function () {
-    form_reply.slideDown(500);
-  });
+  var line_1 = document.querySelector('.shapes .line-1');
+  var line_2 = document.querySelector('.shapes .line-2');
+  var line_3 = document.querySelector('.shapes .line-3');
+  line_3.style.borderBottom = window.outerHeight / 2 + "px solid #17a2b8";
+  line_1.style.borderTop = window.outerHeight / 2 + "px solid #17a2b8";
+  line_2.style.borderBottom = window.outerHeight + "px solid #17a2b8";
 })();
 
 /***/ }),
 
-/***/ 5:
-/*!******************************************************!*\
-  !*** multi ./src/js/customer_panel/ticket-single.js ***!
-  \******************************************************/
+/***/ 6:
+/*!*******************************************************!*\
+  !*** multi ./src/js/customer_panel/personalFactor.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\ticket-single.js */"./src/js/customer_panel/ticket-single.js");
+module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\personalFactor.js */"./src/js/customer_panel/personalFactor.js");
 
 
 /***/ })
