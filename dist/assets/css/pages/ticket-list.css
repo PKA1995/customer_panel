@@ -1,0 +1,29 @@
+.icon-box {
+  display: inline-flex;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px #fff;
+  cursor: pointer;
+}
+
+.icon-box i {
+  padding: .4rem .5rem;
+  font-size: 1.2rem;
+}
+
+table thead {
+  background-color: #17a2b8;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 991.99px) {
+  .icon-box:first-child {
+    margin-bottom: .5rem;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 767.99px) {
+  table {
+    min-width: 767px;
+  }
+}

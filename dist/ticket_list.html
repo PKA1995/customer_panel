@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>پنل مشتری</title>
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages/common.css">
+    <link rel="stylesheet" href="assets/css/pages/ticket-list.css">
+</head>
+<body class="bg-color-home-four">
+<header id="header" class="arduix-nav-style">
+    <div class="navbar-area">
+        <div class="mobile-nav">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="main-nav">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo.png" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">داشبورد</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link dropdown-toggle">
+                                    پیام ها
+                                    <i class='bx bx-chevron-up'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">دریافتی&nbsp;<span>(2)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">ارسالی&nbsp;<span>(2)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="projects.html" class="nav-link dropdown-toggle">
+                                    پروژه ها
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle">
+                                    تیکت ها
+                                    <i class='bx bx-chevron-up'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link"><span class="fa fa-envelope"></span>&nbsp;ارسال
+                                            تیکت </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="ticket_list.html" class="nav-link"><span
+                                                class="fa fa-list"></span>&nbsp;لیست تیکت ها</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link dropdown-toggle">
+                                    مالی
+                                    <i class='bx bx-chevron-up'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">گردش حساب</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="ticket_list.html" class="nav-link">افزایش وجه</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="ticket_list.html" class="nav-link">بازگشت وجه</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="ticket_list.html" class="nav-link">تنظیمات فاکتور</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="ticket_list.html" class="nav-link">شماره حساب ها</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link dropdown-toggle user-icon">
+                                    <span class='bx font-1-5 bx-user-circle'></span>
+                                    &nbsp;
+                                    نام کاربر
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="profile.html" class="nav-link d-flex align-items-center"><span
+                                                class="fa font-1-1 fa-user"></span>&nbsp;<strong>پروفایل</strong></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <form id="logout_form" action="">
+                                            <button type="submit" id="logout_btn"
+                                                    class="nav-link w-100 d-flex align-items-center"><span
+                                                    class="fa font-1-1 fa-sign-out"></span>&nbsp;<strong>خروج</strong>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<main id="main">
+    <div class="page-title-area py-4">
+        <div class="container">
+            <div class="page-title-content">
+                <h3 class="text-white">لیست تیکت ها</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="box white-smoke">
+                <div class="col-12 px-0">
+                    <div class="cart-table table-responsive">
+                        <table class="table table-bordered text-center mb-0">
+                            <thead class="text-white">
+                            <tr class="font-1">
+                                <th>تاریخ</th>
+                                <th>عنوان</th>
+                                <th>پروژه</th>
+                                <th>بخش</th>
+                                <th>تاریخ آخرین به روزرسانی</th>
+                                <th>وضعیت</th>
+                                <th>عملیات</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="text-black">
+                                <td>1399/08/02</td>
+                                <td><span>#3214561</span>&nbsp;-&nbsp;<span>عنوان تیکت</span></td>
+                                <td>برای پروژه ی مشخص</td>
+                                <td>فروش</td>
+                                <td>1399/08/02</td>
+                                <td><span class="badge font-09 badge-success">تکمیل شده</span></td>
+                                <td>
+                                    <a href="ticket-single.html" title="مشاهده" class="icon-box badge-info ml-3">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="add-ticket.html" class="icon-box badge-primary" title="ایجاد تیکت">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="text-black">
+                                <td>1399/08/02</td>
+                                <td><span>#3214561</span>&nbsp;-&nbsp;<span>عنوان تیکت</span></td>
+                                <td>برای پروژه ی مشخص</td>
+                                <td>طراحی</td>
+                                <td>1399/08/02</td>
+                                <td><span class="badge font-09 badge-warning">در انتظار پاسخ</span></td>
+                                <td>
+                                    <a href="{{route('project-detail')}}" title="مشاهده" class="icon-box badge-info ml-3">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="add-ticket.html" class="icon-box badge-primary" title="ایجاد تیکت">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="text-black">
+                                <td>1399/08/02</td>
+                                <td><span>#3214561</span>&nbsp;-&nbsp;<span>عنوان تیکت</span></td>
+                                <td>برای پروژه ی مشخص</td>
+                                <td>فنی</td>
+                                <td>1399/08/02</td>
+                                <td><span class="badge font-09 badge-info">پاسخ داده شد</span></td>
+                                <td>
+                                    <a href="ticket-single.html" title="مشاهده" class="icon-box badge-info ml-3">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="add-ticket.html" class="icon-box badge-primary" title="ایجاد تیکت">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer-top-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="single-widget">
+                    <h3>خدمات شرکت ساپرن</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign/company-web">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                طراحی سایت شرکتی
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign/shop-site">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                طراحی سایت فروشگاهی
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign/tourist-web">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                طراحی سایت گردشگری
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign/medical-webdesign">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                طراحی سایت پزشکی
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign/restaurant-website">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                طراحی سایت رستوران
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign-price" target="_blank" rel="nofollow noopener noreferrer">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                قیمت طراحی سایت
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-widget">
+                    <h3>لینکهای مفید</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign/property-website" target="_blank" rel="nofollow noopener noreferrer">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                طراحی سایت املاک
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/webdesign/news-webdesign" target="_blank" rel="nofollow noopener noreferrer">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                طراحی سایت خبری
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/seo">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                سئو سایت
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.saprenco.com/seo-price" target="_blank" rel="nofollow noopener noreferrer">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                هزینه سئو سایت
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms-conditions.html">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                قوانین و مقررات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="faq.html">
+                                <i class="right-icon bx bx-chevrons-left"></i>
+                                پرسش های متداول
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-widget">
+                    <h3>اطلاعات تماس</h3>
+                    <ul class="information">
+                        <li class="address">
+                            <i class="flaticon-call"></i>
+                            <span>تلفن</span>
+                            <a href="tel:02146135970">
+                                02146135970
+                            </a>
+                            &nbsp-&nbsp
+                            <a href="tel:02146135837">
+                                02146135837
+                            </a>
+                            &nbsp&nbsp
+                            <a href="tel:09386970300">
+                                09386970300
+                            </a>
+                        </li>
+                        <li class="address">
+                            <i class="flaticon-envelope"></i>
+                            <span>ایمیل</span>
+                            <a href="mailto:info@saprenco.com">
+                                info[at]saprenco.com
+                            </a>
+                        </li>
+                        <li class="address">
+                            <i class="flaticon-maps-and-flags"></i>
+                            <span>آدرس</span>
+                            جنت آباد مرکزی، نبش کوچه قربانی زاده شرقی، پلاک ۱۹۲ ساختمان سینا، طبقه دوم واحد ۱۴
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-widget">
+                    <h3>نماد اعتماد الکترونیک</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <img id='oeukfukzwlaowlaowlao' style='cursor:pointer' onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=86444&p=mcsigvkaaodsaodsaods", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt='logo-samandehi' src='assets/img/samandehi.png'/>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a target="_blank" href="https://trustseal.enamad.ir/?id=115216&amp;Code=lwOT4tuZ7JJWb8DtqL7g" rel="nofollow noopener noreferrer"><img src="assets/img/enamad-star2.png" alt="sapren enamd" style="cursor:pointer" id="lwOT4tuZ7JJWb8DtqL7g"></a>
+                        </div>
+                    </div>
+                    <ul class="social-icon">
+                        <li>
+                            <a href="https://www.facebook.com/saprenco" target="_blank" rel="nofollow noopener noreferrer" >
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/saprenco" target="_blank" rel="nofollow noopener noreferrer" >
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://pinterest.com/saprenco" target="_blank" rel="nofollow noopener noreferrer" >
+                                <i class="bx bxl-pinterest-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/sapren" target="_blank" rel="nofollow noopener noreferrer" >
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/saprenco" target="_blank" rel="nofollow noopener noreferrer" >
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+989386970300" target="_blank" rel="nofollow noopener noreferrer" >
+                                <i class="bx bxl-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-shape">
+        <img src="assets/img/shape/footer-shape-one.png" alt="Image" title="">
+        <img src="assets/img/shape/footer-shape-two.png" alt="Image" title="">
+    </div>
+</footer>
+<footer class="footer-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copy-right txt-center">
+                    <p>کپی رایت .<i class="bx bx-copyright"></i> 1399 . تمام حقوق برای <a href="https://www.saprenco.com">شرکت طراحی سایت ساپرن</a> (سانا پرداز نارین) محفوظ است.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/vendor_jpbm.js"></script>
+<script src="assets/js/pages/common_customer.js"></script>
+</body>
+</html>
