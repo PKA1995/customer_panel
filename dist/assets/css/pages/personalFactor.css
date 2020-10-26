@@ -9731,8 +9731,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @font-face {
-  font-family: byekan;
-  src: url("../../fonts/byekan.ttf"), url("../../fonts/byekan.svg") url("../../fonts/byekan.eot") url("../../fonts/byekan.woff") url("../../fonts/byekan.woff2");
+  font-family: vazir;
+  src: url("../../fonts/Vazir-FD.ttf"), url("../../fonts/Vazir-FD.eot") url("../../fonts/Vazir-FD.woff") url("../../fonts/Vazir-FD.woff2");
 }
 
 @page {
@@ -9786,7 +9786,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
-  font-family: byekan;
+  font-family: vazir;
   text-align: right;
   direction: rtl;
 }
