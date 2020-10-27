@@ -114,7 +114,11 @@ hr.default {
 }
 
 main {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+span {
+  display: inline-block;
 }
 
 .flex-box-center {
@@ -123,6 +127,11 @@ main {
   -webkit-align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
+}
+
+p {
+  text-align: justify;
+  word-spacing: -1px;
 }
 
 .dropdown-menu button {

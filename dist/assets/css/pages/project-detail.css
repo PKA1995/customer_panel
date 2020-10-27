@@ -70,6 +70,10 @@
   display: flex;
 }
 
+.pays-table {
+  min-width: 750px;
+}
+
 .table-tab-2 {
   min-width: 500px;
 }
@@ -87,7 +91,7 @@ table td {
 
 table thead {
   background-color: #17a2b8;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 @media (min-width: 768px) {

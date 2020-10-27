@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/pages/common.css">
-    <link rel="stylesheet" href="assets/css/pages/ticket-list.css">
     <link rel="stylesheet" href="assets/css/pages/add-ticket.css">
 </head>
 <body class="bg-color-home-four">
@@ -118,16 +117,54 @@
     </div>
 </header>
 <main id="main">
-    <div class="page-title-area py-4">
-        <div class="container">
-            <div class="page-title-content">
-                <h3 class="text-white">ارسال تیکت</h3>
-            </div>
-        </div>
-    </div>
     <div class="container mt-5">
         <div class="row">
-
+            <div class="box my-5 py-5 px-4">
+                <form method="post" id="add-ticket-form" action="" class="w-100">
+                    <div class="header-box">
+                        <div class="page-title-content">
+                            <h3 class="text-white d-flex align-items-center py-3 px-5">
+                                <span class="fa fa-file"></span>&nbsp;
+                                ارسال تیکت
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="font-1">عنوان تیکت</label>
+                        <input type="text" id="ticket-title" class="form-control">
+                        <label for="" class="error"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="font-1">بخش</label>
+                        <select name="" id="section" class="form-control">
+                            <option value="" class="d-none"></option>
+                            <option value="فروش">فروش</option>
+                            <option value="فنی">فنی</option>
+                            <option value="پشتیبانی">پشتیبانی</option>
+                        </select>
+                        <label for="" class="error"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="font-1">متن تیکت</label>
+                        <textarea name="" id="ticket-text" class="form-control"></textarea>
+                        <label for="" class="error"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="font-1 upload-file-btn default-btn ml-3 float-right">
+                            <span class="fa fa-upload "></span>&nbsp;
+                            ضمیمه فایل
+                            <input type="file" class="upload-input">
+                        </label>
+                        <div class="float-right mt-2">
+                            <label for="" id="attach-file-name"
+                                   class="m-0"><span>نام فایل :</span>&nbsp;<span></span></label>
+                        </div>
+                        <div class="float-left mt-2">
+                            <button type="submit" class="default-btn font-1">ارسال</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </main>
@@ -322,5 +359,6 @@
 
 <script src="assets/js/vendor_jpbm.js"></script>
 <script src="assets/js/pages/common_customer.js"></script>
+<script src="assets/js/pages/add-ticket.js"></script>
 </body>
 </html>

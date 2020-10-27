@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/customer_panel/ticket-single.js":
-/*!************************************************!*\
-  !*** ./src/js/customer_panel/ticket-single.js ***!
-  \************************************************/
+/***/ "./src/js/customer_panel/add-ticket.js":
+/*!*********************************************!*\
+  !*** ./src/js/customer_panel/add-ticket.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -130,23 +130,60 @@
     attach_file_name.textContent = attach_input.files[0].name;
   };
 
-  var answer_btn = $('#answer-btn'),
-      form_reply = $('#reply');
-  answer_btn.on('click', function () {
-    form_reply.slideDown(500);
-  });
+  function validateForm() {
+    var add_ticket_form = document.getElementById('add-ticket-form'),
+        ticket_title = document.getElementById('ticket-title'),
+        ticket_section = document.getElementById('section'),
+        ticket_text = document.getElementById('ticket-text'),
+        form_status = [];
+
+    add_ticket_form.onsubmit = function () {
+      form_status = [];
+
+      if (!ticket_title.value.trim()) {
+        ticket_title.nextElementSibling.textContent = 'الزامی است';
+        ticket_title.classList.add('error');
+        form_status.push(false);
+      } else {
+        ticket_title.nextElementSibling.textContent = null;
+        ticket_title.classList.remove('error');
+      }
+
+      if (!ticket_section.value.trim()) {
+        ticket_section.nextElementSibling.textContent = 'الزامی است';
+        ticket_section.classList.add('error');
+        form_status.push(false);
+      } else {
+        ticket_section.nextElementSibling.textContent = null;
+        ticket_section.classList.remove('error');
+      }
+
+      if (!ticket_text.value.trim()) {
+        ticket_text.nextElementSibling.textContent = 'الزامی است';
+        ticket_text.classList.add('error');
+        form_status.push(false);
+      } else {
+        ticket_text.nextElementSibling.textContent = null;
+        ticket_text.classList.remove('error');
+      }
+
+      return !form_status.includes(false);
+    };
+  }
+
+  validateForm();
 })();
 
 /***/ }),
 
-/***/ 5:
-/*!******************************************************!*\
-  !*** multi ./src/js/customer_panel/ticket-single.js ***!
-  \******************************************************/
+/***/ 6:
+/*!***************************************************!*\
+  !*** multi ./src/js/customer_panel/add-ticket.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\ticket-single.js */"./src/js/customer_panel/ticket-single.js");
+module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\add-ticket.js */"./src/js/customer_panel/add-ticket.js");
 
 
 /***/ })

@@ -81,72 +81,123 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/customer_panel/ticket-single.js":
-/*!************************************************!*\
-  !*** ./src/js/customer_panel/ticket-single.js ***!
-  \************************************************/
+/***/ "./src/js/customer_panel/official-contract.js":
+/*!****************************************************!*\
+  !*** ./src/js/customer_panel/official-contract.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-(function () {
-  var attach_input = document.querySelector('.upload-file-btn input'),
-      attach_file_name = document.querySelector('#attach-file-name span:last-child');
-  var _validFileExtensions = [".jpg", ".jpeg", ".pdf", ".png", ".txt", ".docx"];
+var mousePressed = false;
+var lastX, lastY;
+var ctx_1, ctx_2;
+InitThis_1();
+InitThis_2();
 
-  function ValidateSingleInput(oInput) {
-    if (oInput.type == "file") {
-      var sFileName = oInput.value;
-
-      if (sFileName.length > 0) {
-        var blnValid = false;
-
-        for (var j = 0; j < _validFileExtensions.length; j++) {
-          var sCurExtension = _validFileExtensions[j];
-
-          if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
-            blnValid = true;
-            break;
-          }
-        }
-
-        if (!blnValid) {
-          alert("فایل انتخابی باید دارای فرمت jpg یا jpeg یا pdf یا png یا txt یا docx");
-          oInput.value = "";
-          return false;
-        }
-      }
+function InitThis_1() {
+  ctx_1 = document.getElementById('can-1').getContext("2d");
+  $('#can-1').mousedown(function (e) {
+    mousePressed = true;
+    Draw_1(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
+  });
+  $('#can-1').mousemove(function (e) {
+    if (mousePressed) {
+      Draw_1(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
     }
+  });
+  $('#can-1').mouseup(function (e) {
+    mousePressed = false;
+  });
+  $('#can-1').mouseleave(function (e) {
+    mousePressed = false;
+  });
+}
 
-    return true;
+function InitThis_2() {
+  ctx_2 = document.getElementById('can-2').getContext("2d");
+  $('#can-2').mousedown(function (e) {
+    mousePressed = true;
+    Draw_2(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
+  });
+  $('#can-2').mousemove(function (e) {
+    if (mousePressed) {
+      Draw_2(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
+    }
+  });
+  $('#can-2').mouseup(function (e) {
+    mousePressed = false;
+  });
+  $('#can-2').mouseleave(function (e) {
+    mousePressed = false;
+  });
+}
+
+function Draw_1(x, y, isDown) {
+  if (isDown) {
+    ctx_1.beginPath();
+    ctx_1.strokeStyle = $('#selColor').val();
+    ctx_1.lineWidth = $('#selWidth').val();
+    ctx_1.lineJoin = "round";
+    ctx_1.moveTo(lastX, lastY);
+    ctx_1.lineTo(x, y);
+    ctx_1.closePath();
+    ctx_1.stroke();
   }
 
-  attach_input.onchange = function () {
-    ValidateSingleInput(attach_input);
-    attach_file_name.textContent = attach_input.files[0].name;
-  };
+  lastX = x;
+  lastY = y;
+}
 
-  var answer_btn = $('#answer-btn'),
-      form_reply = $('#reply');
-  answer_btn.on('click', function () {
-    form_reply.slideDown(500);
-  });
-})();
+function Draw_2(x, y, isDown) {
+  if (isDown) {
+    ctx_2.beginPath();
+    ctx_2.strokeStyle = $('#selColor').val();
+    ctx_2.lineWidth = $('#selWidth').val();
+    ctx_2.lineJoin = "round";
+    ctx_2.moveTo(lastX, lastY);
+    ctx_2.lineTo(x, y);
+    ctx_2.closePath();
+    ctx_2.stroke();
+  }
+
+  lastX = x;
+  lastY = y;
+}
+
+function clearcan_1() {
+  // Use the identity matrix while clearing the canvas
+  ctx_1.setTransform(1, 0, 0, 1, 0, 0);
+  ctx_1.clearRect(0, 0, ctx_1.canvas.width, ctx_1.canvas.height);
+}
+
+function clearcan_2() {
+  // Use the identity matrix while clearing the canvas
+  ctx_2.setTransform(1, 0, 0, 1, 0, 0);
+  ctx_2.clearRect(0, 0, ctx_2.canvas.width, ctx_2.canvas.height);
+}
+
+$('#can-1-remove').on('click', function () {
+  clearcan_1();
+});
+$('#can-2-remove').on('click', function () {
+  clearcan_2();
+});
 
 /***/ }),
 
-/***/ 5:
-/*!******************************************************!*\
-  !*** multi ./src/js/customer_panel/ticket-single.js ***!
-  \******************************************************/
+/***/ 7:
+/*!**********************************************************!*\
+  !*** multi ./src/js/customer_panel/official-contract.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\ticket-single.js */"./src/js/customer_panel/ticket-single.js");
+module.exports = __webpack_require__(/*! C:\PROGRAMING_PROJECTS\Projects\Work Projects\git_customer_panel\customer_panel\src\js\customer_panel\official-contract.js */"./src/js/customer_panel/official-contract.js");
 
 
 /***/ })
